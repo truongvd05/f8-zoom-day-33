@@ -14,7 +14,8 @@
     </head>
     <body>
         <button class="btn">click</button>
-        <app-heading>
+        <button class="btn1">click</button>
+        <app-card id="card1" hidden>
             <div class="wrap-img" slot="picture">
                 <img src="./img/img1.png" alt="" />
                 <img class="blur" src="./img/img1.png" alt="" />
@@ -26,7 +27,20 @@
                 perferendis blanditiis corrupti tempore eligendi eum cum aut
                 asperiores magnam tenetur hic laborum.
             </p>
-        </app-heading>
+        </app-card>
+        <app-card id="card2" hidden>
+            <div class="wrap-img" slot="picture">
+                <img src="./img/img2.png" alt="" />
+                <img class="blur" src="./img/img2.png" alt="" />
+            </div>
+            <h1 slot="title">elden ring</h1>
+            <p slot="footer">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                dolores, adipisci eveniet, minus animi omnis ipsam nihil
+                perferendis blanditiis corrupti tempore eligendi eum cum aut
+                asperiores magnam tenetur hic laborum.
+            </p>
+        </app-card>
         <!-- app template -->
         <template id="template">
             <style>
