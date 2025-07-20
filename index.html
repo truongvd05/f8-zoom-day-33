@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <button class="btn">click</button>
+        <app-heading>
+            <div class="wrap-img" slot="picture">
+                <img src="./img/img1.png" alt="" />
+                <img class="blur" src="./img/img1.png" alt="" />
+            </div>
+            <h1 slot="title">Red Dead Redemption 2</h1>
+            <p slot="footer">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                dolores, adipisci eveniet, minus animi omnis ipsam nihil
+                perferendis blanditiis corrupti tempore eligendi eum cum aut
+                asperiores magnam tenetur hic laborum.
+            </p>
+        </app-heading>
+        <!-- app template -->
+        <template id="template">
+            <style>
+                h2 {
+                    color: red;
+                }
+                .modal {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    width: 100%;
+                    height: 100vh;
+                    padding-top: 100px;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+                .wrap-modal {
+                    margin-left: auto;
+                    margin-right: auto;
+                    background-color: aliceblue;
+                    width: 400px;
+                    border-radius: 20px;
+                    padding: 10px;
+                }
+
+                .close {
+                    position: relative;
+                }
+                span {
+                    border-top: 2px black solid;
+                    display: block;
+                    width: 15px;
+                    height: 15px;
+                }
+                .span1 {
+                    position: absolute;
+                    transform: rotate(313deg);
+                    top: 5px;
+                    left: 5px;
+                }
+                .span2 {
+                    position: absolute;
+                    transform: rotate(46deg);
+                    top: 5px;
+                    left: -6px;
+                }
+                .close {
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                    margin-left: auto;
+                }
+                .fade-in {
+                    animation: fadeIn 0.5s ease forwards;
+                }
+                .fade-out {
+                    animation: fadeOut 0.5s ease forwards;
+                }
+                @keyframes fadeOut {
+                    from {
+                        transform: scale(1);
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    to {
+                        opacity: 0;
+                        visibility: hidden;
+
+                        transform: scale(0.5);
+                    }
+                }
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                        transform: scale(0.5);
+                        visibility: hidden;
+                    }
+                    to {
+                        transform: scale(1);
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            </style>
+            <div class="modal">
+                <div class="wrap-modal">
+                    <div class="close">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                    </div>
+                    <slot name="picture"></slot>
+                    <slot name="title"></slot>
+                    <slot name="footer"></slot>
+                </div>
+            </div>
+        </template>
+        <script src="./main.js" type="module"></script>
+    </body>
+</html>
