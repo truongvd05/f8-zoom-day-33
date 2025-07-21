@@ -41,6 +41,8 @@
                 asperiores magnam tenetur hic laborum.
             </p>
         </app-card>
+        <!-- light dom -->
+        <style></style>
         <!-- app template -->
         <template id="template">
             <style>
@@ -66,7 +68,12 @@
                     border-radius: 20px;
                     padding: 10px;
                 }
-
+                .wrap-modal:hover img {
+                    transform: translateY(-10px);
+                }
+                .wrap-modal:hover img.blur {
+                    transform: translate(20px, 0px);
+                }
                 .close {
                     position: relative;
                 }

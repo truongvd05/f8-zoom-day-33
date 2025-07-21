@@ -14,7 +14,6 @@ btn1.addEventListener("click", function (e) {
     e.preventDefault();
     appModal2.open();
 });
-
 document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" || e.key === "x") {
         appModal1.close();

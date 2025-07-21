@@ -12,10 +12,10 @@ img {
     z-index: 1;
     transition: transform linear 0.35s;
 }
-.wrap-modal:hover img {
+.wrap-img:hover img {
     transform: translateY(-10px);
 }
-.wrap-modal:hover img.blur {
+.wrap-img:hover img.blur {
     transform: translate(20px, 0px);
 }
 img.blur {
